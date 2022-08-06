@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import solutionsDB from "./solutions";
+import Wordle from "./components/Wordle";
 
 function App() {
   const [solution, setSolution] = useState([null]);
@@ -26,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <h1>{"Certamente não é o Termoo (by Sekishiki)"}</h1>
-      {solution && <div key={solution.id}>Solution is: {solution}</div>}
+      {solution && <Wordle solution={solution} />}
     </div>
   );
 }
