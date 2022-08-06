@@ -1,4 +1,4 @@
-const solutions = [
+const solutionsDB = [
   { id: 1, word: "termo" },
   { id: 2, word: "algoz" },
   { id: 3, word: "plena" },
@@ -16,4 +16,4 @@ const solutions = [
   { id: 15, word: "arara" },
 ];
 
-export default solutions;
+export default solutionsDB;
