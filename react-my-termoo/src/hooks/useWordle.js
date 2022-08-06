@@ -67,14 +67,12 @@ const useWordle = (solution) => {
       const formatted = formatGuess();
       addNewGuess(formatted);
     }
-
     if (key === "Backspace") {
       setCurrentGuess((prev) => {
         return prev.slice(0, -1);
       });
       return;
     }
-
     if (/^[A-Za-z]$/.test(key)) {
       if (currentGuess.length < 5) {
         setCurrentGuess((prev) => {
