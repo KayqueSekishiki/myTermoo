@@ -1,4 +1,5 @@
 const solutionsDB = [
+  // { id: 1, word: "VOCÊS" },
   { id: 1, word: "NEGRO" },
   { id: 2, word: "MEXER" },
   { id: 3, word: "TERMO" },
