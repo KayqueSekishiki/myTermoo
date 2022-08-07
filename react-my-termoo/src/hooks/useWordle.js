@@ -15,6 +15,7 @@ const useWordle = (solution) => {
     });
 
     formattedGuess.forEach((l, i) => {
+      console.log(solution, l);
       if (solution[i] === l.key) {
         formattedGuess[i].color = "green";
         solutionArray[i] = null;
@@ -49,9 +50,9 @@ const useWordle = (solution) => {
     setUsedKeys((prevUsedKeys) => {
       formattedGuess.forEach((l) => {
         const currentColor = prevUsedKeys[l.key];
-
         if (l.color === "green") {
           prevUsedKeys[l.key] = "green";
+
           return;
         }
 
@@ -60,15 +61,12 @@ const useWordle = (solution) => {
           return;
         }
 
-        if (
-          l.color === "grey" &&
-          currentColor !== "green" &&
-          currentColor !== "yellow"
-        ) {
+        if (l.color === "grey" && currentColor !== ("green" || "yellow")) {
           prevUsedKeys[l.key] = "grey";
           return;
         }
       });
+      console.log(prevUsedKeys);
       return prevUsedKeys;
     });
 
